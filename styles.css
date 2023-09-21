@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+}
+
+#map {
+  width: calc(100vw - 50px);
+  height: 100vh;
+  z-index: 0;
+  left: 50px;
+}
+
+#side_bar {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 50px;
+  height: 100vh;
+  box-shadow: 0px 0px 10px -2px gray;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#menu_icon {
+  width: 20px;
+  height: auto;
+}
+
+#menu_container {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu_container:hover {
+  background-color: #9cd4db;
+  cursor: pointer;
+}
+
+.leaflet-control-zoom {
+  position: absolute;
+  top: calc(100vh - 95px);
+  left: calc(100vw - 110px);
+}
+
+.leaflet-control-geocoder {
+  position: fixed;
+  left: 60px;
+}
+
+.hidden {
+  display: none;
+}
+
+#formModal {
+  width: 40vw;
+  height: 60vh;
+  position: absolute;
+  z-index: 3;
+  top: calc(50vh - 30vh);
+  left: calc(50vw - 20vw);
+  background-color: #9cd4db;
+  box-shadow: 0 0 30px 0px gray;
+  border-radius: 0.5rem;
+}
+
+#formName,
+#formSubmit {
+  margin: 2rem auto;
+  width: 100px;
+  display: block;
+}
+
+#logo2 {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  z-index: 2;
+  top: calc(100vh - 80px);
+  left: 60px;
+}
+
+.leaflet-control-geocoder-form {
+  height: auto !important;
+  visibility: visible !important;
+}
+
+#modalCross {
+  position: absolute;
+  top: -1.8rem;
+  left: calc(100% - 2rem);
+  font-size: 2rem;
+}
+
+#modalCross:hover {
+  cursor: pointer;
+}
+
+#modalOverlay {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: black;
+  opacity: 0.2;
+  z-index: 2;
+}
