@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MapIt Monroe</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="icon" href="/Photos/logo1.jpeg" type="image/icon type" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"
+    />
+    <link rel="stylesheet" href="CSS/styles.css" />
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <div id="side_bar">
+      <div class="container" id="menu_container">
+        <img id="menu_icon" src="/Photos/menu.png" />
+      </div>
+    </div>
+
+    <img id="logo2" src="/Photos/logo2.webp" />
+
+    <div id="formModal" class="hidden">
+      <form
+        id="myForm"
+        method="post"
+        action="https://script.google.com/macros/s/AKfycby1yohzIwdkBiLJ9eft4N2jLxd3J0_bHcXIql3dns0yHNiO8b6lV9BKnBIFccRUHzuq/exec"
+      >
+        <input
+          id="formName"
+          name="name"
+          type="text"
+          autocomplete="off"
+          required
+        />
+        <input id="formLat" name="lat" type="hidden" />
+        <input id="formLng" name="lng" type="hidden" />
+        <input id="formSubmit" type="submit" value="submit" />
+      </form>
+      <p id="modalCross">&times</p>
+    </div>
+    <div id="modalOverlay" class="hidden"></div>
+
+    <script src="https://script.google.com/macros/s/AKfycbwBwXxF9LSKF_bseZRJ9qJctT74zvauj8xkhRpwyrjmxmnZda2yr3pBaWx_Wv4JXmw-/exec"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="Script/script.js"></script>
+  </body>
+</html>
