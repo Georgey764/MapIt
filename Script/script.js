@@ -13,11 +13,11 @@ function reverseGeocode(lat, lon) {
 }
 
 var redIcon = L.icon({
-  iconUrl: "../Photos/marker.png",
+  iconUrl: "Script/../Photos/marker.png",
   iconSize: [25, 41],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
-  shadowUrl: "../Photos/marker-shadow.png",
+  shadowUrl: "Script/../Photos/marker-shadow.png",
   shadowSize: [41, 41],
   shadowAnchor: [12, 41],
 });
