@@ -22,9 +22,8 @@ myForm.addEventListener("submit", function (e) {
           .querySelector("#myForm")
           .insertAdjacentHTML(
             "afterend",
-            "<p class='errorMsg'>The URL is invalid.</p>"
+            "<p style='color:red;text-align:center;' class='errorMsg'>The URL is invalid.</p>"
           );
-        document.querySelector(".errorMsg").style.color = "red";
         setTimeout(() => {
           document.querySelector(".errorMsg").remove();
         }, 3000);
