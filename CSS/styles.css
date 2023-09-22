@@ -3,14 +3,13 @@ body {
 }
 
 #map {
-  width: calc(100vw - 50px);
+  width: 100vw;
   height: 100vh;
   z-index: 0;
-  left: 50px;
 }
 
 #side_bar {
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   top: 0;
   width: 50px;
@@ -45,7 +44,7 @@ body {
 .leaflet-control-zoom {
   position: absolute;
   top: calc(100vh - 95px);
-  left: calc(100vw - 110px);
+  left: calc(100vw - 50px);
 }
 
 .leaflet-control-geocoder {
@@ -80,7 +79,7 @@ body {
   position: absolute;
   width: 200px;
   height: auto;
-  z-index: 2;
+  z-index: 0;
   top: calc(100vh - 80px);
   left: 60px;
 }
@@ -110,4 +109,42 @@ body {
   background: black;
   opacity: 0.2;
   z-index: 2;
+}
+
+.menuModal {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 50px;
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  box-shadow: 0px 0px 10px -2px gray;
+}
+
+.menuModalOverlay {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.menuModal__Option-1,
+.menuModal__Option-2 {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.menuModal__Option-1:hover,
+.menuModal__Option-2:hover {
+  background-color: lightgray;
+  cursor: pointer;
 }

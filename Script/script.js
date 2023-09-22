@@ -1,14 +1,12 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 
-console.log(String(id).length);
-
 if (id == null || String(id).length != 44) {
   window.location.href = "home-page.html";
 }
 
 const markers = [];
-const map = L.map("map").setView([37.8283, -93.5795], 5);
+const map = L.map("map").setView([39.8283, -98.5795], 4);
 
 // function reverseGeocode(lat, lon) {
 //   fetch(
@@ -136,3 +134,23 @@ const outOfModal = function () {
 document.querySelector("#modalCross").addEventListener("click", outOfModal);
 
 document.querySelector("#modalOverlay").addEventListener("click", outOfModal);
+
+document.querySelector("#menu_container").addEventListener("click", (e) => {
+  document.querySelector(".menuModal").classList.toggle("hidden");
+  document.querySelector(".menuModalOverlay").classList.toggle("hidden");
+
+  const outOfmenuModal = document
+    .querySelector("body")
+    .addEventListener("click", function (e) {
+      console.log(e.target.classList);
+      if (
+        e.target.classList[0] != "menu" &&
+        e.target.id != "menu_container" &&
+        e.target.id != "menu_icon"
+      ) {
+        document.querySelector(".menuModal").classList.add("hidden");
+        document.querySelector(".menuModalOverlay").classList.add("hidden");
+        this.removeEventListener("click", outOfmenuModal);
+      }
+    });
+});
