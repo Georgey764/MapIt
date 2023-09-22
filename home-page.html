@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MapIt | Home Page</title>
+    <link rel="icon" href="Photos/logo1.jpeg" type="image/icon type" />
+  </head>
+  <body>
+    <form
+      id="myForm"
+      action="https://script.google.com/macros/s/AKfycbx_7mRYbBD-pFLnSgs1UjtVfDl6pUzSF7xPenKG1bkTiFGczGJkCnqDd8vMTetNFfiz0w/exec"
+      method="post"
+    >
+      <input
+        id="formInput"
+        type="text"
+        name="url"
+        placeholder="Enter the google sheets' url"
+        autocomplete="off"
+      />
+      <input type="hidden" name="request" value="url-post" />
+      <input id="formBtn" value="submit" type="submit" />
+    </form>
+
+    <script src="Script/home-page-script.js"></script>
+  </body>
+</html>

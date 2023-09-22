@@ -1,16 +1,24 @@
-var map = L.map("map").setView([37.8283, -93.5795], 5);
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+
+console.log(String(id).length);
+
+if (id == null || String(id).length != 44) {
+  window.location.href = "home-page.html";
+}
 
 const markers = [];
+const map = L.map("map").setView([37.8283, -93.5795], 5);
 
-function reverseGeocode(lat, lon) {
-  fetch(
-    `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`
-  )
-    .then((response) => response.json())
-    .then(function (data) {
-      return data;
-    });
-}
+// function reverseGeocode(lat, lon) {
+//   fetch(
+//     `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`
+//   )
+//     .then((response) => response.json())
+//     .then(function (data) {
+//       return data;
+//     });
+// }
 
 var redIcon = L.icon({
   iconUrl: "Script/../Photos/marker.png",
@@ -29,7 +37,7 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 fetch(
-  "https://script.google.com/macros/s/AKfycby1yohzIwdkBiLJ9eft4N2jLxd3J0_bHcXIql3dns0yHNiO8b6lV9BKnBIFccRUHzuq/exec"
+  `https://script.google.com/macros/s/AKfycbzZCPKKz-wtjOtI8clBHorFyCeMF3cr5I4H0kvns5d5-WFb-Tk3eEpCGmb3ivjSEo6V/exec?id=${id}`
 )
   .then(function (response) {
     return response.json();
@@ -71,8 +79,6 @@ map.on("click", (e) => {
 
   document.querySelector("#formLat").value = `${lat}`;
   document.querySelector("#formLng").value = `${lng}`;
-
-  console.log(reverseGeocode(lat, lng));
 });
 
 document.querySelector(`#myForm`).addEventListener("submit", function (e) {
@@ -83,10 +89,11 @@ document.querySelector(`#myForm`).addEventListener("submit", function (e) {
   let data = new FormData(document.querySelector("#myForm"));
 
   fetch(
-    "https://script.google.com/macros/s/AKfycby1yohzIwdkBiLJ9eft4N2jLxd3J0_bHcXIql3dns0yHNiO8b6lV9BKnBIFccRUHzuq/exec",
+    `https://script.google.com/macros/s/AKfycbzZCPKKz-wtjOtI8clBHorFyCeMF3cr5I4H0kvns5d5-WFb-Tk3eEpCGmb3ivjSEo6V/exec?id=${id}`,
     {
       method: "POST",
       body: data,
+      mode: "cors",
     }
   )
     .then((res) => res.text())
