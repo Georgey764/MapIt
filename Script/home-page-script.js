@@ -8,7 +8,7 @@ myForm.addEventListener("submit", function (e) {
   let data = new FormData(document.querySelector("#myForm"));
 
   fetch(
-    "https://script.google.com/macros/s/AKfycbwaTnVRfCZ8bVQQQwJnTbXIy6BBB-93sGXz7nFAf7b6CcVjbFZ9yrifo8J3i1qjVA_gdg/exec",
+    "https://script.google.com/macros/s/AKfycbydEk4K6D8ExRKUpkHntFhISd0NbdHxjvvoV0LRZ9sRC8yAYrC46Vad9xf8-wqPkUfbXA/exec",
     {
       method: "post",
       body: data,
@@ -16,8 +16,18 @@ myForm.addEventListener("submit", function (e) {
   )
     .then((response) => response.text())
     .then((text) => {
-      if (text == "The URL is invalid.") {
-        console.log("The URL is invalid.");
+      console.log(text);
+      if (text == "Error Validating URL") {
+        document
+          .querySelector("#myForm")
+          .insertAdjacentHTML(
+            "afterend",
+            "<p class='errorMsg'>The URL is invalid.</p>"
+          );
+        document.querySelector(".errorMsg").style.color = "red";
+        setTimeout(() => {
+          document.querySelector(".errorMsg").remove();
+        }, 3000);
       } else {
         window.location.href = `index.html?id=${text}`;
       }

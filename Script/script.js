@@ -152,5 +152,15 @@ document.querySelector("#menu_container").addEventListener("click", (e) => {
         document.querySelector(".menuModalOverlay").classList.add("hidden");
         this.removeEventListener("click", outOfmenuModal);
       }
+
+      if (e.target.classList[1] == "menuModal__Option-1") {
+        window.open("https://docs.google.com/spreadsheets/create", "_blank");
+
+        window.location.href = "Script/../home-page.html";
+      }
+
+      if (e.target.classList[1] == "menuModal__Option-2") {
+        window.location.href = "Script/../home-page.html";
+      }
     });
 });
