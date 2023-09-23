@@ -8,7 +8,7 @@ myForm.addEventListener("submit", function (e) {
   let data = new FormData(document.querySelector("#myForm"));
 
   fetch(
-    "https://script.google.com/macros/s/AKfycbydEk4K6D8ExRKUpkHntFhISd0NbdHxjvvoV0LRZ9sRC8yAYrC46Vad9xf8-wqPkUfbXA/exec",
+    "https://script.google.com/macros/s/AKfycbwSt5oxaLIprIlMIi26CPaTUxhjuXAoq9S5qz-l2VZRN6jFQh53LRmzAVEgoRRJGCuEpw/exec",
     {
       method: "post",
       body: data,
