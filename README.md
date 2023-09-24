@@ -1,5 +1,5 @@
 # MapIt (In-Progress)
-A mapping application designed for Tourism related Businesses to gather insightful information regarding their visitors FROM their visitors in a fun and user-friendly manner.
+A mapping application designed for Tourism related Businesses to gather insightful information of their visitors FROM their visitors in a fun and user-friendly manner.
 
 The beta version is live at: https://georgey764.github.io/MapIt/home-page.html
 
