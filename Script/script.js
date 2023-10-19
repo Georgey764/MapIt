@@ -5,6 +5,8 @@ if (id == null || String(id).length != 44) {
   window.location.href = "home-page.html";
 }
 
+const scriptURL = `https://script.google.com/macros/s/AKfycbzhE6o5I18V7IqoZb_VDZy2DsEs_9aVrhMTMdE7CdBHUbHCPJ5_UUYOvFEYsHHspRaa/exec?id=${id}`;
+
 const markers = [];
 const map = L.map("map").setView([39.8283, -98.5795], 4);
 
@@ -34,9 +36,7 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
 
-fetch(
-  `https://script.google.com/macros/s/AKfycbzZCPKKz-wtjOtI8clBHorFyCeMF3cr5I4H0kvns5d5-WFb-Tk3eEpCGmb3ivjSEo6V/exec?id=${id}`
-)
+fetch(scriptURL)
   .then(function (response) {
     return response.json();
   })
@@ -70,11 +70,20 @@ map.on("click", (e) => {
     `
     );
 
+  let dateNow = new Date(Date.now());
+  let date =
+    ("0" + dateNow.getMonth()).slice(-2) +
+    "/" +
+    ("0" + dateNow.getDate()).slice(-2) +
+    "/" +
+    dateNow.getFullYear();
+
   markers.push(marker);
 
   document.querySelector("#formModal").classList.remove("hidden");
   document.querySelector("#modalOverlay").classList.remove("hidden");
 
+  document.querySelector("#formDate").value = `${date}`;
   document.querySelector("#formLat").value = `${lat}`;
   document.querySelector("#formLng").value = `${lng}`;
 });
@@ -86,14 +95,11 @@ document.querySelector(`#myForm`).addEventListener("submit", function (e) {
 
   let data = new FormData(document.querySelector("#myForm"));
 
-  fetch(
-    `https://script.google.com/macros/s/AKfycbzZCPKKz-wtjOtI8clBHorFyCeMF3cr5I4H0kvns5d5-WFb-Tk3eEpCGmb3ivjSEo6V/exec?id=${id}`,
-    {
-      method: "POST",
-      body: data,
-      mode: "cors",
-    }
-  )
+  fetch(scriptURL, {
+    method: "POST",
+    body: data,
+    mode: "cors",
+  })
     .then((res) => res.text())
     .then((data) => {
       console.log("Post: " + data);
@@ -101,6 +107,10 @@ document.querySelector(`#myForm`).addEventListener("submit", function (e) {
     .catch((error) => console.log(error));
 
   document.querySelector("#formName").value = "";
+  document.querySelector("#formGuest").value = "";
+  document.querySelector("#formDuration").value = "";
+  document.querySelector("#formPurpose").value = "";
+  document.querySelector("#formFeedback").value = "";
 });
 
 // Search Bar

@@ -16,6 +16,13 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="CSS/styles.css" />
   </head>
 
@@ -40,13 +47,63 @@
         method="post"
         action="https://script.google.com/macros/s/AKfycby1yohzIwdkBiLJ9eft4N2jLxd3J0_bHcXIql3dns0yHNiO8b6lV9BKnBIFccRUHzuq/exec"
       >
+        <h1>Location Info</h1>
         <input
           id="formName"
+          class="formInput"
           name="name"
           type="text"
           autocomplete="off"
+          placeholder="Place of Origin"
           required
         />
+
+        <input
+          id="formGuest"
+          name="guest"
+          type="number"
+          autocomplete="off"
+          placeholder="Number of Guests"
+          required
+        />
+
+        <select
+          id="formDuration"
+          class="formSelect"
+          name="duration"
+          type="number"
+          placeholder="Duration of Stay"
+          autocomplete="off"
+          required
+          aria-label="Default select example"
+        >
+          <option selected>Duration of stay</option>
+          <option value="1">Less than a week</option>
+          <option value="2">Around Two weeks</option>
+          <option value="3">One month</option>
+          <option value="3">More than a month</option>
+        </select>
+
+        <textarea
+          id="formPurpose"
+          class="formTextArea"
+          name="purpose"
+          placeholder="Purpose of visit"
+          autocomplete="off"
+          required
+          aria-label="Default select example"
+        ></textarea>
+
+        <textarea
+          id="formFeedback"
+          class="formTextArea"
+          name="feedback"
+          placeholder="Feedback"
+          autocomplete="off"
+          aria-label="Default select example"
+        ></textarea>
+
+        <input id="formDate" name="date" type="hidden" />
         <input id="formLat" name="lat" type="hidden" />
         <input id="formLng" name="lng" type="hidden" />
         <input id="formSubmit" type="submit" value="submit" />
@@ -62,6 +119,11 @@
       crossorigin=""
     ></script>
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
     <script src="Script/script.js"></script>
   </body>
 </html>
