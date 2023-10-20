@@ -22,9 +22,13 @@ body {
   align-items: center;
 }
 
-#menu_icon,
-#dashboard_icon {
+#menu_icon {
   width: 20px;
+  height: auto;
+}
+
+#dashboard_icon {
+  width: 35px;
   height: auto;
 }
 
@@ -36,10 +40,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-#dashboard_icon {
-  width: 35px;
 }
 
 #menu_container:hover,
