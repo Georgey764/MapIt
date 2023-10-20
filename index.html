@@ -27,90 +27,105 @@
   </head>
 
   <body>
-    <div id="map"></div>
-    <div id="side_bar">
-      <div class="container" id="menu_container">
-        <img id="menu_icon" src="Photos/menu.png" />
+    <main>
+      <div id="map"></div>
+      <div id="side_bar">
+        <div class="container" id="menu_container">
+          <img id="menu_icon" src="Photos/menu.png" />
+        </div>
+        <div class="container" id="dashboard_container">
+          <img id="dashboard_icon" src="Photos/dashboard.png" />
+        </div>
       </div>
-    </div>
-    <div class="menu menuModal hidden">
-      <div class="menu menuModal__Option-1">Create New Data Sheet</div>
-      <div class="menu menuModal__Option-2">Import Existing Data Sheet</div>
-    </div>
-    <div class="menuModalOverlay hidden"></div>
+      <div class="menu menuModal hidden">
+        <div class="menu menuModal__Option-1">Create New Data Sheet</div>
+        <div class="menu menuModal__Option-2">Import Existing Data Sheet</div>
+      </div>
+      <div class="menuModalOverlay hidden"></div>
 
-    <img id="logo2" src="Photos/logo2.webp" />
+      <img id="logo2" src="Photos/logo2.webp" />
 
-    <div id="formModal" class="hidden">
-      <form
-        id="myForm"
-        method="post"
-        action="https://script.google.com/macros/s/AKfycby1yohzIwdkBiLJ9eft4N2jLxd3J0_bHcXIql3dns0yHNiO8b6lV9BKnBIFccRUHzuq/exec"
-      >
-        <h1>Location Info</h1>
-        <input
-          id="formName"
-          class="formInput"
-          name="name"
-          type="text"
-          autocomplete="off"
-          placeholder="Place of Origin"
-          required
-        />
-
-        <input
-          id="formGuest"
-          name="guest"
-          type="number"
-          autocomplete="off"
-          placeholder="Number of Guests"
-          required
-        />
-
-        <select
-          id="formDuration"
-          class="formSelect"
-          name="duration"
-          type="number"
-          placeholder="Duration of Stay"
-          autocomplete="off"
-          required
-          aria-label="Default select example"
+      <div id="formModal" class="hidden">
+        <form
+          id="myForm"
+          method="post"
+          action="https://script.google.com/macros/s/AKfycby1yohzIwdkBiLJ9eft4N2jLxd3J0_bHcXIql3dns0yHNiO8b6lV9BKnBIFccRUHzuq/exec"
         >
-          <option selected>Duration of stay</option>
-          <option value="1">Less than a week</option>
-          <option value="2">Around Two weeks</option>
-          <option value="3">One month</option>
-          <option value="3">More than a month</option>
-        </select>
+          <h1>Visitor Info</h1>
 
-        <textarea
-          id="formPurpose"
-          class="formTextArea"
-          name="purpose"
-          placeholder="Purpose of visit"
-          autocomplete="off"
-          required
-          aria-label="Default select example"
-        ></textarea>
+          <input
+            id="formGuest"
+            name="guest"
+            type="number"
+            autocomplete="off"
+            placeholder="Number of Guests"
+            required
+          />
 
-        <textarea
-          id="formFeedback"
-          class="formTextArea"
-          name="feedback"
-          placeholder="Feedback"
-          autocomplete="off"
-          aria-label="Default select example"
-        ></textarea>
+          <select
+            id="formDuration"
+            class="formSelect"
+            name="duration"
+            type="number"
+            placeholder="Duration of Stay"
+            autocomplete="off"
+            required
+            aria-label="Default select example"
+          >
+            <option value="" disabled selected>Duration of stay</option>
+            <option value="Less than a week">Less than a week</option>
+            <option value="Around two weeks">Around two weeks</option>
+            <option value="One month">One month</option>
+            <option value="More than a month">More than a month</option>
+          </select>
 
-        <input id="formDate" name="date" type="hidden" />
-        <input id="formLat" name="lat" type="hidden" />
-        <input id="formLng" name="lng" type="hidden" />
-        <input id="formSubmit" type="submit" value="submit" />
-      </form>
-      <p id="modalCross">&times</p>
-    </div>
-    <div id="modalOverlay" class="hidden"></div>
+          <textarea
+            id="formPurpose"
+            class="formTextArea"
+            name="purpose"
+            placeholder="Purpose of visit"
+            autocomplete="off"
+            required
+            aria-label="Default select example"
+          ></textarea>
+
+          <select
+            id="formFeedback"
+            class="formSelect"
+            name="feedback"
+            placeholder="Feedback"
+            autocomplete="off"
+            aria-label="Default select example"
+          >
+            <option value="" disabled selected>Rate your visit</option>
+            <option value="5 Star">★★★★★</option>
+            <option value="4 Star">★★★★</option>
+            <option value="3 Star">★★★</option>
+            <option value="2 Star">★★</option>
+            <option value="1 Star">★</option>
+          </select>
+          <div class="formSelected">
+            <p>
+              <strong>Your selected origin: </strong><br />
+              ZIP: <span id="zip"></span><br />
+              Place: <span id="place"></span> <br />
+              <i
+                >Not your origin?
+                <u class="formEdit" style="color: blue">edit</u></i
+              >
+            </p>
+          </div>
+
+          <input id="formName" type="hidden" name="name" />
+          <input id="formDate" name="date" type="hidden" />
+          <input id="formLat" name="lat" type="hidden" />
+          <input id="formLng" name="lng" type="hidden" />
+          <input id="formSubmit" type="submit" value="Submit" />
+        </form>
+        <p id="modalCross">&times</p>
+      </div>
+      <div id="modalOverlay" class="hidden"></div>
+    </main>
 
     <script src="https://script.google.com/macros/s/AKfycbwBwXxF9LSKF_bseZRJ9qJctT74zvauj8xkhRpwyrjmxmnZda2yr3pBaWx_Wv4JXmw-/exec"></script>
     <script

@@ -22,12 +22,14 @@ body {
   align-items: center;
 }
 
-#menu_icon {
+#menu_icon,
+#dashboard_icon {
   width: 20px;
   height: auto;
 }
 
-#menu_container {
+#menu_container,
+#dashboard_container {
   width: 50px;
   height: 50px;
   background-color: white;
@@ -36,7 +38,12 @@ body {
   align-items: center;
 }
 
-#menu_container:hover {
+#dashboard_icon {
+  width: 35px;
+}
+
+#menu_container:hover,
+#dashboard_container:hover {
   background-color: #9cd4db;
   cursor: pointer;
 }
@@ -96,27 +103,26 @@ body {
   left: 60px;
 }
 
-#formName {
-  width: 385px;
+#formGuest {
+  width: 180px;
+  height: 2.5rem;
+  border-radius: 1rem;
+  padding-left: 1rem;
+  margin: 0.8rem 20px 0.8rem 0;
+  border: 1px solid black;
+}
+
+#formDuration {
+  width: 180px;
   height: 2.5rem;
   margin: 0.8rem 0;
   padding-left: 1rem;
   border-radius: 1rem;
   border: 1px solid black;
-  padding-left: 1rem;
 }
 
-#formGuest {
-  width: 165px;
-  height: 2.5rem;
-  border-radius: 1rem;
-  padding-left: 1rem;
-  margin-right: 1.6rem;
-  border: 1px solid black;
-}
-
-#formDuration {
-  width: 190px;
+#formFeedback {
+  width: 385px;
   height: 2.5rem;
   margin: 0.8rem 0;
   padding-left: 1rem;
@@ -165,7 +171,7 @@ body {
   position: fixed;
   top: 0;
   left: 50px;
-  width: 200px;
+  width: 240px;
   height: 100px;
   background-color: white;
   box-shadow: 0px 0px 10px -2px gray;
@@ -183,7 +189,7 @@ body {
 
 .menuModal__Option-1,
 .menuModal__Option-2 {
-  width: 200px;
+  width: 240px;
   height: 50px;
   text-align: center;
   display: flex;
@@ -195,5 +201,15 @@ body {
 .menuModal__Option-1:hover,
 .menuModal__Option-2:hover {
   background-color: lightgray;
+  cursor: pointer;
+}
+
+.formSelected {
+  margin-top: 2.5rem;
+  font-size: 0.8rem;
+  width: 290px;
+}
+
+.formEdit:hover {
   cursor: pointer;
 }
