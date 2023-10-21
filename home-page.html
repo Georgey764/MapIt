@@ -47,7 +47,7 @@
         <input type="hidden" name="request" value="url-post" />
         <input id="formBtn" value="SUBMIT" type="submit" />
       </form>
-      <p id="demo-link">Demo link: <u style="color: blue">https://docs.google.com/spreadsheets/d/1KL_H6gLcKTmBKVeyblyhH_xlN2-Wo2AN7SfPPKQB2WM/edit?usp=sharing</u></p>
+      <span id="demo-link">Demo link: <br><a target = "_blank" href="https://docs.google.com/spreadsheets/d/1KL_H6gLcKTmBKVeyblyhH_xlN2-Wo2AN7SfPPKQB2WM/edit?usp=sharing" style="word-wrap: break-word;">https://docs.google.com/spreadsheets/d/1KL_H6gLcKTmBKVeyblyhH_xlN2-Wo2AN7SfPPKQB2WM/edit?usp=sharing</a></span>
       <p id="demo-instruction">• Copy and paste the demo link into the input box and into a new tab to view real-time data updates</p>
     </div>
     <main>
@@ -93,13 +93,14 @@
       </div>
 
       <div id="mechanism-page" class="mechanism-page">
-        <p class="mechanism-header">How does it work?</p>
         <div class="mechanism-text">
+          <p class="mechanism-header">How does it work?</p>
           <p class="mechanism-description">MapIt employs Google Sheets as its database, leveraging Google App Scripts to facilitate the process. Upon inputting your Google Sheet's link, the app automatically extracts the sheet's ID and establishes a connection.<br><br>The application harnesses various geolocation APIs to gather location information. When a visitor submits data, it is securely stored within the specified Google Sheet, which can be conveniently retrieved through direct access to the Google Sheet or via our interactive dashboard.<br><br>Should you need to restart the app, simply input the link to the Google Sheet where your data is stored. Our app will seamlessly retrieve and re-visualize the information on the map. Please refrain from manually editing the data to ensure our app accurately manages the information.</p>
         </div>
         <img src="Photos/mechanismPic.png" class="mechanism-pic">
       </div>
     </main>
+    <footer><p>©George Khawas<br>©Abhisek Amagain<br>©Dr. Lon Smith</p></footer>
     <script src="Script/home-page-script.js"></script>
   </body>
 </html>
