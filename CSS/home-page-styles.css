@@ -294,6 +294,7 @@ footer {
 
   .home-text {
     width: min(400px, 90%);
+    margin-top: 5rem;
   }
 
   .about-text {
@@ -371,6 +372,10 @@ footer {
   #demo-link > a {
     font-size: 0.5rem;
     word-wrap: break-word;
+  }
+
+  #demo-link {
+    margin-left: 2rem;
   }
 
   #formInput {

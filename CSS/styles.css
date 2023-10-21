@@ -215,3 +215,30 @@ body {
 .formEdit:hover {
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .formSelected {
+    width: 90%;
+  }
+
+  #formModal {
+    width: 90vw;
+    height: 80vh;
+    position: absolute;
+    top: 10vh;
+    left: 5vw;
+    overflow-y: scroll !important;
+  }
+
+  #formPurpose,
+  #formFeedback,
+  #formGuest,
+  #formDuration {
+    width: 90%;
+  }
+
+  #formSubmit {
+    position: relative;
+    display: block;
+  }
+}
