@@ -7,27 +7,99 @@
 
     <title>MapIt | Home Page</title>
     <link href="CSS/home-page-styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mate:ital@0;1&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="icon" href="Photos/logo1.jpeg" type="image/icon type" />
   </head>
   <body>
-    <p class="header">MapIt</p>
-    <form
-      id="myForm"
-      action="https://script.google.com/macros/s/AKfycbwSt5oxaLIprIlMIi26CPaTUxhjuXAoq9S5qz-l2VZRN6jFQh53LRmzAVEgoRRJGCuEpw/exec"
-      method="post"
-    >
-      <input
-        id="formInput"
-        type="text"
-        name="url"
-        placeholder="Enter the google sheets url"
-        autocomplete="off"
-      />
-      <input type="hidden" name="request" value="url-post" />
-      <input id="formBtn" value="submit" type="submit" />
-    </form>
+    <div id="nav-bar">
+      <span id="nav-header">MAP_IT</span>
+      <nav>
+        <ul id="nav-link-container">
+          <li><a href="#about-page">ABOUT</a></li>
+          <li><a href="#guide-page">GUIDE</a></li>
+          <li><a href="#mechanism-page">MECHANISM</a></li>
+          <li><a href="#partners-page">PARTNERS</a></li>
+          <li><button class="home-button">START</button></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="form hidden">
+      <form
+        id="myForm"
+        action="https://script.google.com/macros/s/AKfycbwSt5oxaLIprIlMIi26CPaTUxhjuXAoq9S5qz-l2VZRN6jFQh53LRmzAVEgoRRJGCuEpw/exec"
+        method="post"
+      >
+        <input
+          id="formInput"
+          type="text"
+          name="url"
+          placeholder="Enter the google sheets url"
+          autocomplete="off"
+        />
+        <input type="hidden" name="request" value="url-post" />
+        <input id="formBtn" value="SUBMIT" type="submit" />
+      </form>
+      <p id="demo-link">Demo link: <u style="color: blue">https://docs.google.com/spreadsheets/d/1KL_H6gLcKTmBKVeyblyhH_xlN2-Wo2AN7SfPPKQB2WM/edit?usp=sharing</u></p>
+      <p id="demo-instruction">• Copy and paste the demo link into the input box and into a new tab to view real-time data updates</p>
+    </div>
+    <main>
+      <div class="home-page">
+        <div class="home-text">
+          <p class="home-header">MapIt</p>
+          <p class="home-description">Your interactive visitor data solution</p>
+          <button class="home-button">START</button>
+        </div>
+        <img class="home-pic" src="Photos/MapIT.png" />
+      </div>
+      <div id="about-page" class="about-page">
+        <img src="Photos/MapItForm.png" class="about-pic" />
+        <div class="about-text">
+          <p class="about-header">About</hp>
+          <p class="about-description">
+            MapIt is a user-friendly, interactive data collection and
+            visualization tool designed to gather location data from visitors
+            and present it on an interactive map. Its primary objective is to
+            enhance data collection for the Bureau of Tourism, enabling them to
+            leverage this information for the advancement of tourism in the
+            region. The app features an intuitive dashboard that provides the
+            Bureau of Tourism with easy access to the collected data.
+          </p>
+        </div>
+      </div>
+      <div id="guide-page" class="guide-page">
+        <div class="instruction-container">
+          <div class="instruction-image instruction-1"></div>
+          <p class="instruction-header">Step 1:</p>
+          <p class="instruction-description">Begin by creating a Google Sheet, then navigate to the top-right corner and select the "Share" option. Set the permission to "Anyone with the link" and establish an access level of "Editor."</p>
+        </div>
+        <div class="instruction-container">
+          <div class="instruction-image instruction-2"></div>
+          <p class="instruction-header">Step 2:</p>
+          <p class="instruction-description">Afterward, please copy the link and proceed to access the MapIt forms by clicking here or the "Start" button in the navigation bar. Then, paste the copied link into the URL link box and click the "Submit" button.</p>
+        </div>
+        <div class="instruction-container">
+          <div class="instruction-image instruction-3"></div>
+          <p class="instruction-header">Step 3:</p>
+          <p class="instruction-description">Switch the application to "Visit Mode" and patiently await visitor interactions and data submissions. Alternatively, manually input collected data. To review the accumulated data, exit "Viewer Mode" and access it either on the map or through the dashboard.</p>
+        </div>
+      </div>
 
+      <div id="mechanism-page" class="mechanism-page">
+        <p class="mechanism-header">How does it work?</p>
+        <div class="mechanism-text">
+          <p class="mechanism-description">MapIt employs Google Sheets as its database, leveraging Google App Scripts to facilitate the process. Upon inputting your Google Sheet's link, the app automatically extracts the sheet's ID and establishes a connection.<br><br>The application harnesses various geolocation APIs to gather location information. When a visitor submits data, it is securely stored within the specified Google Sheet, which can be conveniently retrieved through direct access to the Google Sheet or via our interactive dashboard.<br><br>Should you need to restart the app, simply input the link to the Google Sheet where your data is stored. Our app will seamlessly retrieve and re-visualize the information on the map. Please refrain from manually editing the data to ensure our app accurately manages the information.</p>
+        </div>
+        <img src="Photos/mechanismPic.png" class="mechanism-pic">
+      </div>
+    </main>
     <script src="Script/home-page-script.js"></script>
   </body>
 </html>

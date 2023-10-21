@@ -51,7 +51,18 @@
           method="post"
           action="https://script.google.com/macros/s/AKfycby1yohzIwdkBiLJ9eft4N2jLxd3J0_bHcXIql3dns0yHNiO8b6lV9BKnBIFccRUHzuq/exec"
         >
-          <h1>Visitor Info</h1>
+          <h3>Selected Origin: <br /></h3>
+          <div class="formSelected">
+            <p>
+              Place: <span id="place"></span> <br />
+              ZIP: <span id="zip"></span><br />
+              <i
+                >Not your origin?
+                <u class="formEdit" style="color: blue">edit</u></i
+              >
+            </p>
+          </div>
+          <h4>Visitor Info:</h4>
 
           <input
             id="formGuest"
@@ -59,7 +70,6 @@
             type="number"
             autocomplete="off"
             placeholder="Number of Guests"
-            required
           />
 
           <select
@@ -69,7 +79,6 @@
             type="number"
             placeholder="Duration of Stay"
             autocomplete="off"
-            required
             aria-label="Default select example"
           >
             <option value="" disabled selected>Duration of stay</option>
@@ -85,7 +94,6 @@
             name="purpose"
             placeholder="Purpose of visit"
             autocomplete="off"
-            required
             aria-label="Default select example"
           ></textarea>
 
@@ -104,17 +112,6 @@
             <option value="2 Star">★★</option>
             <option value="1 Star">★</option>
           </select>
-          <div class="formSelected">
-            <p>
-              <strong>Your selected origin: </strong><br />
-              ZIP: <span id="zip"></span><br />
-              Place: <span id="place"></span> <br />
-              <i
-                >Not your origin?
-                <u class="formEdit" style="color: blue">edit</u></i
-              >
-            </p>
-          </div>
 
           <input id="formName" type="hidden" name="name" />
           <input id="formDate" name="date" type="hidden" />

@@ -1,7 +1,19 @@
 const inputField = document.querySelector("#formInput");
 const submitButton = document.querySelector("#formBtn");
+const formContainer = document.querySelector(".form");
 const myForm = document.querySelector("#myForm");
+const startBtn = document.querySelectorAll(".home-button");
 
+// On clicking start
+startBtn.forEach((cur) => {
+  cur.addEventListener("click", () => {
+    console.log("hi");
+    formContainer.classList.remove("hidden");
+    document.body.style.overflowY = "hidden";
+  });
+});
+
+// On clicking submit
 myForm.addEventListener("submit", function (e) {
   e.preventDefault();
 

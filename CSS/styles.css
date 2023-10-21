@@ -108,14 +108,14 @@ body {
   height: 2.5rem;
   border-radius: 1rem;
   padding-left: 1rem;
-  margin: 0.8rem 20px 0.8rem 0;
+  margin: 0.7rem 20px 0.8rem 0;
   border: 1px solid black;
 }
 
 #formDuration {
   width: 180px;
   height: 2.5rem;
-  margin: 0.8rem 0;
+  margin: 0.7rem 0;
   padding-left: 1rem;
   border-radius: 1rem;
   border: 1px solid black;
@@ -124,7 +124,7 @@ body {
 #formFeedback {
   width: 385px;
   height: 2.5rem;
-  margin: 0.8rem 0;
+  margin: 0.7rem 0;
   padding-left: 1rem;
   border-radius: 1rem;
   border: 1px solid black;
@@ -132,11 +132,12 @@ body {
 
 .formTextArea {
   width: 385px;
-  height: 4.4rem;
-  margin: 0.8rem 0;
+  height: 2.5rem;
+  margin: 0.7rem 0;
   padding-left: 1rem;
   border-radius: 1rem;
   border: 1px solid black;
+  padding-top: 0.5rem;
 }
 
 .leaflet-control-geocoder-form {
@@ -205,9 +206,10 @@ body {
 }
 
 .formSelected {
-  margin-top: 2.5rem;
   font-size: 0.8rem;
-  width: 290px;
+  width: 385px;
+  margin-bottom: 1rem;
+  margin: 0.7rem 0;
 }
 
 .formEdit:hover {

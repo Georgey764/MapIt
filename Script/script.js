@@ -172,7 +172,7 @@ document.querySelector(".formEdit").addEventListener("click", () => {
 
   document.querySelector(
     "#zip"
-  ).innerHTML = `<input placeholder="Enter your postal code" required id="editFormZip" type="number">`;
+  ).innerHTML = `<input placeholder="Enter your postal code" id="editFormZip" type="number">`;
   document.querySelector(
     "#place"
   ).innerHTML = `<input placeholder="Enter your address" autocomplete="off" required id="editFormPlace" type="text">`;

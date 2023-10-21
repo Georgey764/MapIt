@@ -1,20 +1,270 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
 #myForm {
-  text-align: center;
+  width: 100%;
+  height: 100vh;
 }
 
 #formInput {
   width: 400px;
   height: 40px;
   text-align: center;
+  position: fixed;
+  top: calc(50% - 20px);
+  left: calc(50% - 260px);
+  border-radius: 1rem;
+  border: 1px solid black;
 }
 
 #formBtn {
-  height: 40px;
-  width: 80px;
+  font-family: "Quicksand", sans-serif;
+  background: green;
+  color: white;
+  border-radius: 2rem;
+  font-size: 1rem;
+  height: 2.5rem;
+  width: 100px;
+  border: none;
+  box-shadow: 0px 0px 10px -5px black;
+
+  position: fixed;
+  top: calc(50% - 1.1rem);
+  left: 60%;
 }
 
-.header {
-  text-align: center;
-  margin-top: calc(50vh - 100px);
-  font-size: 2rem;
+#formBtn:hover {
+  cursor: pointer;
+}
+
+#demo-instruction {
+  position: fixed;
+  top: 65%;
+  width: 700px;
+  left: calc(50% - 350px);
+  font-family: "Mate", sans-serif;
+}
+
+#demo-link {
+  position: fixed;
+  top: 60%;
+  width: 890px;
+  left: calc(50% - 440px);
+  font-family: "Mate", sans-serif;
+}
+
+.form {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-family: "Quicksand", sans-serif;
+  box-shadow: 0px 0px 20px -5px black;
+  background-color: white;
+  z-index: 2;
+}
+
+li > a {
+  text-decoration: none;
+  color: black;
+}
+
+#nav-header {
+  margin-left: 2rem;
+}
+
+#nav-link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 800px;
+  list-style-type: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.home-pic {
+  width: 600px;
+  height: auto;
+  box-shadow: 0px 0px 10px -5px black;
+}
+
+.home-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-text > .home-header {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  font-size: 6rem;
+  margin: 0;
+}
+
+.home-text > .home-description {
+  font-family: "Mate", serif;
+}
+
+.home-button {
+  font-family: "Quicksand", sans-serif;
+  background: green;
+  color: white;
+  border-radius: 2rem;
+  font-size: 1rem;
+  height: 2.5rem;
+  width: 80px;
+  border: none;
+  box-shadow: 0px 0px 10px -5px black;
+}
+
+.home-button:hover {
+  cursor: pointer;
+}
+
+.about-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about-text {
+  width: 400px;
+}
+
+.about-text > .about-header {
+  font-family: "Quicksand", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.about-text > .about-description {
+  font-family: "Mate", serif;
+}
+
+.about-pic {
+  width: 600px;
+  height: auto;
+  box-shadow: 0px 0px 10px -5px black;
+}
+
+.guide-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.instruction-image {
+  width: 400px;
+  height: 350px;
+  background-size: cover;
+}
+
+.instruction-1 {
+  background-image: url("/Photos/instruction-1.png");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 0px 10px -5px black;
+  border-radius: 1rem;
+}
+
+.instruction-2 {
+  background-image: url("/Photos/instruction-2.png");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 0px 10px -5px black;
+  border-radius: 1rem;
+}
+
+.instruction-3 {
+  background-image: url("/Photos/MapItForm.png");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 0px 10px -5px black;
+  border-radius: 1rem;
+}
+
+.instruction-container {
+  width: 400px;
+}
+
+.instruction-header {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 900;
+}
+
+.instruction-description {
+  font-family: "Mate", serif;
+}
+
+.mechanism-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.mechanism-pic {
+  width: 700px;
+  height: auto;
+  box-shadow: 0px 0px 10px -5px black;
+}
+
+.mechanism-text {
+  width: 600px;
+}
+
+.mechanism-header {
+  font-family: "Quicksand", sans-serif;
+  font-size: 4rem;
+  position: absolute;
+  top: 80px;
+  left: 70px;
+}
+
+.mechanism-description {
+  font-family: "Mate", serif;
 }
