@@ -26,8 +26,8 @@ function removeDataFromForm() {
   document.querySelector("#formDuration").value = "";
   document.querySelector("#formPurpose").value = "";
   document.querySelector("#formFeedback").value = "";
-  document.querySelector("#zip").innerHTML = "";
-  document.querySelector("#place").innerHTML = "";
+  document.querySelector("#zip").innerHTML = "Loading...";
+  document.querySelector("#place").innerHTML = "Loading...";
 }
 
 var redIcon = L.icon({
@@ -114,6 +114,7 @@ map.on("click", (e) => {
       document.querySelector("#zip").innerHTML = zip;
       document.querySelector("#place").innerHTML = place;
       document.querySelector("#formName").value = `${place}`;
+      document.querySelector(".formSelected>p>i").classList.remove("hidden");
     })
     .catch((error) => console.log(error));
 
@@ -181,10 +182,16 @@ document.querySelector(".formEdit").addEventListener("click", () => {
   let zip = "";
 
   // On blurring the edit forms
-  document.querySelector("#editFormZip").addEventListener("blur", () => {
+  function removeMarker() {
+    markers[markers.length - 1].remove();
+    removeEventListener("click", removeMarker);
+  }
+
+  document.querySelector("#editFormPlace").addEventListener("blur", () => {
+    place = document.querySelector("#editFormPlace").value;
     zip = document.querySelector("#editFormZip").value;
 
-    if (zip.trim() != "" && place.trim() != "") {
+    if (place.trim() != "") {
       let query = place + " " + zip;
       fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${query}`)
         .then((response) => response.json())
@@ -199,6 +206,13 @@ document.querySelector(".formEdit").addEventListener("click", () => {
               `PLACE HOLDER
     `
             );
+          markers.push(marker);
+          document
+            .querySelector("#modalCross")
+            .addEventListener("click", removeMarker);
+          document
+            .querySelector("#modalOverlay")
+            .addEventListener("click", removeMarker);
         })
         .catch((error) => console.log(error));
     }
@@ -237,13 +251,14 @@ const outOfModal = function () {
 
   document.querySelector("#modalOverlay").classList.add("hidden");
 
+  document.querySelector(".formSelected>p>i").classList.add("hidden");
+
   removeDataFromForm();
 
-  map.removeLayer(markers[markers.length - 1]);
+  markers[markers.length - 1].remove();
 };
 
 document.querySelector("#modalCross").addEventListener("click", outOfModal);
-
 document.querySelector("#modalOverlay").addEventListener("click", outOfModal);
 
 document.querySelector("#side_bar").addEventListener("click", (e) => {

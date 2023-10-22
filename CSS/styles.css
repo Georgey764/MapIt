@@ -94,18 +94,9 @@ body {
   cursor: pointer;
 }
 
-#logo2 {
-  position: absolute;
-  width: 200px;
-  height: auto;
-  z-index: 0;
-  top: calc(100vh - 80px);
-  left: 60px;
-}
-
 #formGuest {
   width: 180px;
-  height: 2.5rem;
+  height: 2.4rem;
   border-radius: 1rem;
   padding-left: 1rem;
   margin: 0.7rem 20px 0.8rem 0;
@@ -114,7 +105,7 @@ body {
 
 #formDuration {
   width: 180px;
-  height: 2.5rem;
+  height: 2.4rem;
   margin: 0.7rem 0;
   padding-left: 1rem;
   border-radius: 1rem;
@@ -123,7 +114,7 @@ body {
 
 #formFeedback {
   width: 385px;
-  height: 2.5rem;
+  height: 2.4rem;
   margin: 0.7rem 0;
   padding-left: 1rem;
   border-radius: 1rem;
@@ -132,12 +123,12 @@ body {
 
 .formTextArea {
   width: 385px;
-  height: 2.5rem;
+  height: 2.4rem;
   margin: 0.7rem 0;
   padding-left: 1rem;
   border-radius: 1rem;
   border: 1px solid black;
-  padding-top: 0.5rem;
+  padding-top: 0.4rem;
 }
 
 .leaflet-control-geocoder-form {

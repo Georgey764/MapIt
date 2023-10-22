@@ -43,26 +43,24 @@
       </div>
       <div class="menuModalOverlay hidden"></div>
 
-      <img id="logo2" src="Photos/logo2.webp" />
-
       <div id="formModal" class="hidden">
         <form
           id="myForm"
           method="post"
           action="https://script.google.com/macros/s/AKfycby1yohzIwdkBiLJ9eft4N2jLxd3J0_bHcXIql3dns0yHNiO8b6lV9BKnBIFccRUHzuq/exec"
         >
-          <h3>Selected Origin: <br /></h3>
+          <h4>Selected Origin: <br /></h4>
           <div class="formSelected">
             <p>
-              Place: <span id="place"></span> <br />
-              ZIP: <span id="zip"></span><br />
-              <i
+              Place: <span id="place">Loading...</span> <br />
+              ZIP: <span id="zip">Loading...</span><br />
+              <i class="hidden"
                 >Not your origin?
                 <u class="formEdit" style="color: blue">edit</u></i
               >
             </p>
           </div>
-          <h4>Visitor Info:</h4>
+          <h4>Survey:</h4>
 
           <input
             id="formGuest"
