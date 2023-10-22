@@ -3,6 +3,7 @@ const submitButton = document.querySelector("#formBtn");
 const formContainer = document.querySelector(".form");
 const myForm = document.querySelector("#myForm");
 const startBtn = document.querySelectorAll(".home-button");
+const closeForm = document.querySelector(".formCross");
 
 // On clicking start
 startBtn.forEach((cur) => {
@@ -13,12 +14,20 @@ startBtn.forEach((cur) => {
   });
 });
 
+//On clicking close form
+closeForm.addEventListener("click", () => {
+  document.querySelector(".form").classList.add("hidden");
+  document.body.style.overflowY = "scroll";
+});
+
 // On clicking submit
 let errorUP = false;
 let loadUp = false;
 
 myForm.addEventListener("submit", function (e) {
   e.preventDefault();
+
+  document.querySelector("#formInput").blur();
 
   let data = new FormData(document.querySelector("#myForm"));
   if (!loadUp) {

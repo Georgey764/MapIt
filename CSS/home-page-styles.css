@@ -53,6 +53,17 @@ main {
   cursor: pointer;
 }
 
+.formCross {
+  position: absolute;
+  top: 6rem;
+  left: calc(100% - 50px);
+  width: 20px;
+}
+
+.formCross:hover {
+  cursor: pointer;
+}
+
 .errorMsg {
   width: 200px;
   text-align: center;
