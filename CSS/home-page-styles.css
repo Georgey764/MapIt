@@ -54,10 +54,12 @@ main {
 }
 
 .errorMsg {
+  width: 200px;
+  text-align: center;
   z-index: 4;
   position: absolute;
   top: 48%;
-  left: calc(50% - 100px);
+  left: calc(50% - 150px);
   color: black;
   font-family: "Mate", sans-serif;
 }
