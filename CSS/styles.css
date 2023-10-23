@@ -207,7 +207,7 @@ body {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .formSelected {
     width: 90%;
   }
