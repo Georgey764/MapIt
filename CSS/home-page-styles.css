@@ -427,3 +427,9 @@ footer {
     left: calc(50% - 100px);
   }
 }
+
+@media (max-width: 600px) {
+  .errorMsg {
+    top: 45%;
+  }
+}
