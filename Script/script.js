@@ -5,10 +5,10 @@ if (id == null || String(id).length != 44) {
   window.location.href = "home-page.html";
 }
 
-const scriptURL = `https://script.google.com/macros/s/AKfycbzhE6o5I18V7IqoZb_VDZy2DsEs_9aVrhMTMdE7CdBHUbHCPJ5_UUYOvFEYsHHspRaa/exec?id=${id}`;
+const scriptURL = `https://script.google.com/macros/s/AKfycbzzkh3ORVSeQArF-Hw63R_FFwxuYC7Gx1XFdRmP9UdnbdLme9fZYYFhJ_eRIKKJzyAu/exec?id=${id}`;
 
 const markers = [];
-const map = L.map("map").setView([39.8283, -98.5795], 4);
+const map = L.map("map").setView([39.8283, -98.5795], 5);
 
 function reverseGeocode(lat, lon) {
   return fetch(
@@ -18,6 +18,12 @@ function reverseGeocode(lat, lon) {
     .then(function (data) {
       return data;
     });
+}
+
+function exitMarkMode() {
+  document.querySelector("#mark_mode").innerHTML = "";
+  document.querySelector("#map").classList.remove("outline");
+  map.removeEventListener("click");
 }
 
 function removeDataFromForm() {
@@ -54,12 +60,7 @@ fetch(scriptURL)
     for (let i = 1; i < text.length; i++) {
       const [, lat, lng] = text[i];
 
-      const marker = L.marker([lat, lng], { icon: redIcon })
-        .addTo(map)
-        .bindPopup(
-          `PLACE HOLDER
-          `
-        );
+      const marker = L.marker([lat, lng], { icon: redIcon }).addTo(map);
 
       markers.push(marker);
     }
@@ -68,62 +69,73 @@ fetch(scriptURL)
     console.error("Error:", error);
   });
 
-map.on("click", (e) => {
-  const {
-    latlng: { lat, lng },
-  } = e;
+document.querySelector("#btn_mark").addEventListener("click", () => {
+  this.map.classList.add("outline");
+  document.querySelector("#mark_mode").insertAdjacentHTML(
+    "afterbegin",
+    `<div id="mark_text">Place your origin on the map!</div>
+      <div id="btn_exit">EXIT MARK MODE</div>
+      `
+  );
 
-  const marker = L.marker([lat, lng], { icon: redIcon })
-    .addTo(map)
-    .bindPopup(
-      `PLACE HOLDER
-    `
-    );
+  document.querySelector("#btn_exit").addEventListener("click", exitMarkMode);
 
-  markers.push(marker);
+  map.addEventListener("click", function onMapClick(e) {
+    exitMarkMode();
 
-  // for dates
-  let dateNow = new Date(Date.now());
-  let date =
-    ("0" + dateNow.getMonth()).slice(-2) +
-    "/" +
-    ("0" + dateNow.getDate()).slice(-2) +
-    "/" +
-    dateNow.getFullYear();
+    const {
+      latlng: { lat, lng },
+    } = e;
 
-  // for reverse Geocode
-  reverseGeocode(lat, lng)
-    .then((response) => {
-      const zip = response.address?.postcode
-        ? response.address.postcode
-        : "Not Found";
-      const city = response.address?.city ? response.address.city : "";
-      const county = response.address?.county ? response.address.county : "";
-      const state = response.address?.state ? response.address.state : "";
-      const country = response.address?.country ? response.address.country : "";
-      let place = [city, county, state, country]
-        .filter((cur, i) => {
-          if (cur != "") {
-            return cur;
-          }
-        })
-        .join(", ");
-      if (place == "") {
-        place = "Not Found";
-      }
-      document.querySelector("#zip").innerHTML = zip;
-      document.querySelector("#place").innerHTML = place;
-      document.querySelector("#formName").value = `${place}`;
-      document.querySelector(".formSelected>p>i").classList.remove("hidden");
-    })
-    .catch((error) => console.log(error));
+    const marker = L.marker([lat, lng], { icon: redIcon }).addTo(map);
 
-  document.querySelector("#formModal").classList.remove("hidden");
-  document.querySelector("#modalOverlay").classList.remove("hidden");
+    markers.push(marker);
 
-  document.querySelector("#formDate").value = `${date}`;
-  document.querySelector("#formLat").value = `${lat}`;
-  document.querySelector("#formLng").value = `${lng}`;
+    // for dates
+    let dateNow = new Date(Date.now());
+    let date =
+      ("0" + dateNow.getMonth()).slice(-2) +
+      "/" +
+      ("0" + dateNow.getDate()).slice(-2) +
+      "/" +
+      dateNow.getFullYear();
+
+    // for reverse Geocode
+    reverseGeocode(lat, lng)
+      .then((response) => {
+        const zip = response.address?.postcode
+          ? response.address.postcode
+          : "Not Found";
+        const city = response.address?.city ? response.address.city : "";
+        const county = response.address?.county ? response.address.county : "";
+        const state = response.address?.state ? response.address.state : "";
+        const country = response.address?.country
+          ? response.address.country
+          : "";
+        let place = [city, county, state, country]
+          .filter((cur, i) => {
+            if (cur != "") {
+              return cur;
+            }
+          })
+          .join(", ");
+        if (place == "") {
+          place = "Not Found";
+        }
+        document.querySelector("#zip").innerHTML = zip;
+        document.querySelector("#place").innerHTML = place;
+        document.querySelector("#formName").value = `${place}`;
+        document.querySelector(".formSelected>p>i").classList.remove("hidden");
+      })
+      .catch((error) => console.log(error));
+
+    document.querySelector("#formModal").classList.remove("hidden");
+    document.querySelector("#modalOverlay").classList.remove("hidden");
+
+    document.querySelector("#formDate").value = `${date}`;
+    document.querySelector("#formLat").value = `${lat}`;
+    document.querySelector("#formLng").value = `${lng}`;
+  });
 });
 
 document.querySelector(`#myForm`).addEventListener("submit", function (e) {
@@ -255,42 +267,14 @@ const outOfModal = function () {
 
   removeDataFromForm();
 
+  map.removeEventListener("click");
+
   markers[markers.length - 1].remove();
 };
 
 document.querySelector("#modalCross").addEventListener("click", outOfModal);
 document.querySelector("#modalOverlay").addEventListener("click", outOfModal);
 
-document.querySelector("#side_bar").addEventListener("click", (e) => {
-  if (e.target.closest("#menu_container")) {
-    document.querySelector(".menuModal").classList.toggle("hidden");
-    document.querySelector(".menuModalOverlay").classList.toggle("hidden");
-
-    const outOfmenuModal = document
-      .querySelector("body")
-      .addEventListener("click", function (e) {
-        if (
-          e.target.classList[0] != "menu" &&
-          e.target.id != "menu_container" &&
-          e.target.id != "menu_icon"
-        ) {
-          document.querySelector(".menuModal").classList.add("hidden");
-          document.querySelector(".menuModalOverlay").classList.add("hidden");
-          this.removeEventListener("click", outOfmenuModal);
-        }
-
-        if (e.target.classList[1] == "menuModal__Option-1") {
-          window.open("https://docs.google.com/spreadsheets/create", "_blank");
-
-          window.location.href = "Script/../home-page.html";
-        }
-
-        if (e.target.classList[1] == "menuModal__Option-2") {
-          window.location.href = "Script/../home-page.html";
-        }
-      });
-  }
-
-  if (e.target.closest("#dashboard_container")) {
-  }
+document.querySelector("#center_icon").addEventListener("click", () => {
+  map.setView([39.8283, -98.5795], 5);
 });

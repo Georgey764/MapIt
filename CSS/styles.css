@@ -1,3 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap");
+
+.outline {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  border: 10px solid green !important;
+  box-sizing: border-box;
+}
+
+#mark_text {
+  z-index: 2;
+  position: fixed;
+  width: 300px;
+  height: 3rem;
+  top: 10px;
+  left: calc(50% - 150px);
+  background-color: green;
+  text-align: center;
+  border-radius: 0 0 1rem 1rem;
+  font-size: 1.2rem;
+  padding-top: 0.4rem;
+  font-weight: 500;
+  color: white;
+}
+
 body {
   margin: 0;
 }
@@ -8,55 +34,130 @@ body {
   z-index: 0;
 }
 
-#side_bar {
+#btn_mark {
   z-index: 2;
   position: fixed;
-  top: 0;
-  width: 50px;
-  height: 100vh;
+  top: calc(100% - 115px);
+  left: calc(100% - 330px);
+  width: 275px;
+  height: 60px;
   box-shadow: 0px 0px 10px -2px gray;
-  background-color: white;
+  background-color: #00bf63;
+  border-radius: 2rem;
+  color: white;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-}
-
-#menu_icon {
-  width: 20px;
-  height: auto;
-}
-
-#dashboard_icon {
-  width: 35px;
-  height: auto;
-}
-
-#menu_container,
-#dashboard_container {
-  width: 50px;
-  height: 50px;
-  background-color: white;
-  display: flex;
   justify-content: center;
+  padding: 0;
+  font-family: "Hedvig Letters Sans", sans-serif;
+  font-size: 1rem;
+}
+
+#btn_exit {
+  z-index: 3;
+  position: fixed;
+  top: calc(100% - 115px);
+  left: calc(100% - 330px);
+  width: 275px;
+  height: 60px;
+  box-shadow: 0px 0px 10px -2px gray;
+  background-color: red;
+  border-radius: 2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-family: "Hedvig Letters Sans", sans-serif;
+  font-size: 1rem;
+}
+
+#btn_mark:hover {
+  cursor: pointer;
+  background-color: green;
+}
+
+#btn_exit:hover {
+  cursor: pointer;
+  background-color: darkred;
+}
+
+#menu_bar {
+  z-index: 2;
+  position: fixed;
+  top: calc(100% - 115px);
+  left: calc(100% - 620px);
+  width: 275px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   align-items: center;
 }
 
-#menu_container:hover,
-#dashboard_container:hover {
-  background-color: #9cd4db;
+.container {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  box-shadow: 0px 0px 10px -2px gray;
+}
+
+.icon {
+  width: 25px;
+  height: auto;
+}
+
+#center_icon:hover,
+.icon:hover {
+  background-color: lightgray;
   cursor: pointer;
 }
 
 .leaflet-control-zoom {
-  position: absolute;
-  top: calc(100vh - 95px);
-  left: calc(100vw - 50px);
+  position: fixed;
+  top: 5px;
+  left: calc(100vw - 60px);
+}
+
+.leaflet-control-attribution {
+  visibility: hidden;
 }
 
 .leaflet-control-geocoder {
   position: fixed;
-  left: 60px;
+  left: 15px;
+  top: 15px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.25rem;
+}
+
+.leaflet-control-geocoder-icon {
+  border-radius: 1.25rem;
+  padding-left: 3rem;
+}
+
+.leaflet-control-geocoder-form {
+  display: inline-block !important;
+  font-size: 0.7rem;
+}
+
+.leaflet-control-geocoder-alternatives {
+  position: fixed;
+  left: 15px;
+  top: 80px;
+  width: 304px;
+  background-color: white;
+  border-radius: 1.25rem;
+  padding: 0.5rem;
+  border: 2px solid rgba(0, 0, 0, 0.35);
 }
 
 .hidden {
@@ -112,7 +213,8 @@ body {
   border: 1px solid black;
 }
 
-#formFeedback {
+#formFeedback,
+#formPurpose {
   width: 385px;
   height: 2.4rem;
   margin: 0.7rem 0;
@@ -214,9 +316,9 @@ body {
 
   #formModal {
     width: 90vw;
-    height: 80vh;
+    height: 60vh;
     position: absolute;
-    top: 10vh;
+    top: 20vh;
     left: 5vw;
     overflow-y: scroll !important;
   }
@@ -231,5 +333,8 @@ body {
   #formSubmit {
     position: relative;
     display: block;
+    position: absolute;
+    top: calc(100% - 70px);
+    left: calc(100% - 120px);
   }
 }

@@ -28,19 +28,22 @@
 
   <body>
     <main>
+      <div id="mark_mode"></div>
+
       <div id="map"></div>
-      <div id="side_bar">
-        <div class="container" id="menu_container">
-          <img id="menu_icon" src="Photos/menu.png" />
+
+      <div id="menu_bar">
+        <div class="container" id="center_icon">
+          <img class="icon" src="Photos/center.png" />
         </div>
-        <!-- <div class="container" id="dashboard_container">
-          <img id="dashboard_icon" src="Photos/dashboard.png" />
-        </div> -->
       </div>
-      <div class="menu menuModal hidden">
+
+      <!-- <div class="menu menuModal hidden">
         <div class="menu menuModal__Option-1">Create New Data Sheet</div>
         <div class="menu menuModal__Option-2">Import Existing Data Sheet</div>
-      </div>
+      </div> -->
+      <div id="btn_mark">LEAVE A MARK!</div>
+
       <div class="menuModalOverlay hidden"></div>
 
       <div id="formModal" class="hidden">
@@ -56,7 +59,9 @@
               ZIP: <span id="zip">Loading...</span><br />
               <i class="hidden"
                 >Not your origin?
-                <u class="formEdit" style="color: blue">edit</u></i
+                <u class="formEdit" style="color: blue"
+                  >Click Here to Change!</u
+                ></i
               >
             </p>
           </div>
@@ -86,14 +91,22 @@
             <option value="More than a month">More than a month</option>
           </select>
 
-          <textarea
+          <select
             id="formPurpose"
-            class="formTextArea"
+            class="formSelect"
             name="purpose"
             placeholder="Purpose of visit"
             autocomplete="off"
             aria-label="Default select example"
-          ></textarea>
+          >
+            <option value="" disabled selected>Purpose of Visit</option>
+            <option value="Leisure / Tourism">Leisure / Tourism</option>
+            <option value="Business / Work">Business / Work</option>
+            <option value="Family / Friends">Family / Friends</option>
+            <option value="Education">Education</option>
+            <option value="Health / Welness">Health / Welness</option>
+            <option value="Adventure / Sports">Adventure / Sports</option>
+          </select>
 
           <select
             id="formFeedback"
@@ -103,12 +116,18 @@
             autocomplete="off"
             aria-label="Default select example"
           >
-            <option value="" disabled selected>Rate your visit</option>
-            <option value="5 Star">★★★★★</option>
-            <option value="4 Star">★★★★</option>
-            <option value="3 Star">★★★</option>
-            <option value="2 Star">★★</option>
-            <option value="1 Star">★</option>
+            <option value="" disabled selected>
+              How did you hear about us?
+            </option>
+            <option value="Social Media">Social Media</option>
+            <option value="Friends and Family">Friends and Family</option>
+            <option value="Search Engines / Our Website">
+              Search Engines / Our Website
+            </option>
+            <option value="Newspapers / Magazines">
+              Newspapers / Magazines
+            </option>
+            <option value="Highway Signs">Highway Signs</option>
           </select>
 
           <input id="formName" type="hidden" name="name" />
