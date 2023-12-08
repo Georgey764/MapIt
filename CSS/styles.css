@@ -8,6 +8,25 @@
   box-sizing: border-box;
 }
 
+.credits {
+  position: fixed;
+  top: calc(100% - 60px);
+  z-index: 2;
+  left: 20px;
+  font-family: "Hedvig Letters Sans", sans-serif;
+  color: black;
+}
+
+.credit_icon {
+  width: 40px;
+  border-radius: 1.25rem;
+  font-size: 2rem;
+}
+
+#discover {
+  margin-left: 0.5rem;
+}
+
 #mark_text {
   z-index: 2;
   position: fixed;
