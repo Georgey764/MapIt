@@ -181,8 +181,8 @@ body {
 #formSubmit {
   position: absolute;
   top: calc(100% - 70px);
-  left: calc(100% - 120px);
-  width: 100px;
+  left: calc(100% - 185px);
+  width: 150px;
   height: 50px;
   border-radius: 2rem;
   font-size: 1rem;
@@ -333,8 +333,9 @@ body {
   #formSubmit {
     position: relative;
     display: block;
-    position: absolute;
-    top: calc(100% - 70px);
-    left: calc(100% - 120px);
+    width: 150px;
+    margin-left: 10%;
+    margin-top: 1rem;
+    left: calc(50% - 75px);
   }
 }
