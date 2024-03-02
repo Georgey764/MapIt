@@ -32,7 +32,7 @@
   position: fixed;
   width: 300px;
   height: 3rem;
-  top: 8px;
+  top: 0;
   left: calc(50% - 150px);
   background-color: green;
   text-align: center;
