@@ -27,7 +27,7 @@ _**The application is live at:**_ [Click Here](https://georgey764.github.io/MapI
 
 2. Create a new google docs and paste it in the input field. Make sure that google docs has right permissions. Go to the top-right corner, choose "Share," set permission to "Anyone with the link," and set the access level to "Editor."
   
-<div align="center"><kbd><img width="557" alt="Screenshot 2024-06-25 at 1 55 27 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/8216b97e-c0ef-4e6b-9e17-6d9096a0e490">></kbd></div>
+<div align="center"><kbd><img width="400" alt="Screenshot 2024-06-25 at 1 55 27 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/8216b97e-c0ef-4e6b-9e17-6d9096a0e490">></kbd></div>
 <br/>
    
 4. is  Our application clears the data from sheets that don't contain the Spreadsheet tag to make space for it to plot the data collected from its users. The Spreadsheet tag is a tag that our application inserts in your sheet once it starts plotting!
