@@ -38,5 +38,8 @@ _**The application is live at:**_ [Click Here](https://georgey764.github.io/MapI
 
 <br/>
    
-5. Make sure you don't alter the google sheets data. If unaltered, our application can plot the collected data back to the map on map restart.
+5. The entered data is saved in the the google sheets that you entered in the home page before _(Refer to step number 2)_. To view the data just open the link.
+
+<div align="center><kbd><img width="500" alt="Screenshot 2024-06-25 at 2 08 27 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/0697b058-ae75-4881-88e6-835897f0fb02">
+</kbd></div>
 
