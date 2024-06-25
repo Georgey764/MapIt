@@ -21,7 +21,7 @@ _**The application is live at:**_ [Click Here](https://georgey764.github.io/MapI
 #### Q) How to use it?
 1. Once you click start on the home page you will be able to see the input field.
 
-<div align="center"><kbd><img width="400" alt="Screenshot 2024-06-25 at 1 50 51 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/67422d04-4700-4e29-86f5-7f1b079d48c7"></kbd>
+<div align="center"><kbd><img width="380" alt="Screenshot 2024-06-25 at 1 50 51 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/67422d04-4700-4e29-86f5-7f1b079d48c7"></kbd>
 <kbd><img width="400" alt="Screenshot 2024-06-25 at 1 39 42 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/ca80544b-e671-49fb-a1fa-85dc81137240"></kbd></div>
 
 2. Make sure that the sheet does not contain any information that you might need. Our application clears the data from sheets that don't contain the Spreadsheet tag to make space for it to plot the data collected from its users. The Spreadsheet tag is a tag that our application inserts in your sheet once it starts plotting!
