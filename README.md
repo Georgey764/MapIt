@@ -39,5 +39,5 @@ _**The application is live at:**_ [Click Here](https://georgey764.github.io/MapI
 <br/>
    
 5. The entered data is saved in the the google sheets that you entered in the home page before _(Refer to step number 2)_. To view the data just open the link.
-6. 
-<img width="1232" alt="Screenshot 2024-06-25 at 2 11 11 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/1e727820-1772-42d5-bab8-59aa3827eb4b">
+  
+<div align="center"><kbd><img width="500" alt="Screenshot 2024-06-25 at 2 11 11 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/1e727820-1772-42d5-bab8-59aa3827eb4b"></kbd></div>
