@@ -4,7 +4,7 @@
   
 _**The application is live at:**_ [Click Here](https://georgey764.github.io/MapIt/home-page.html)  
   
-<div align="center"><kbd><img width="600" alt="Screenshot 2024-06-25 at 1 17 52 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/73841e4d-aac6-4eb4-a90a-f9402f793719"></kbd></div>  
+<div align="center"><kbd><img width="600" alt="Screenshot 2024-06-25 at 1 17 52 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/73841e4d-aac6-4eb4-a90a-f9402f793719"></kbd><p>fig: screenshot of the homepage</p></div>  
 
   
 ### Q) How to use it?
