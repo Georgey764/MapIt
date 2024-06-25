@@ -19,9 +19,10 @@ _**The application is live at:**_ [Click Here](https://georgey764.github.io/MapI
 1. Store your
   
 #### Q) How to use it?
-1. Just make sure to enter a valid URL of a google sheet document in the home-page of our application.
+1. Once you click start on the home page you will be able to see the input field.
 
-<div align="center"><kbd><img width="500" alt="Screenshot 2024-06-25 at 1 39 42 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/ca80544b-e671-49fb-a1fa-85dc81137240"></kbd></div>
+<div align="center"><kbd><img width="400" alt="Screenshot 2024-06-25 at 1 50 51 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/67422d04-4700-4e29-86f5-7f1b079d48c7"></kbd>
+<kbd><img width="400" alt="Screenshot 2024-06-25 at 1 39 42 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/ca80544b-e671-49fb-a1fa-85dc81137240"></kbd></div>
 
 2. Make sure that the sheet does not contain any information that you might need. Our application clears the data from sheets that don't contain the Spreadsheet tag to make space for it to plot the data collected from its users. The Spreadsheet tag is a tag that our application inserts in your sheet once it starts plotting!
 3. Once you enter the data you will be redirected to the main application where the visitors of the businesses can touch on the location of the map where they originated from and answer an interactive questionaire. The point where the user touched will be plotted on the map and the data will be stored in your google sheet.
