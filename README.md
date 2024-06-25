@@ -33,6 +33,8 @@ _**The application is live at:**_ [Click Here](https://georgey764.github.io/MapI
 > _Our application clears the data from sheets that don't contain specially formatted location information. Be careful not to enter any google sheet that contains important info._
 
 4. Upon entering the google sheets, you will be redirected to the main page where the location data stored on the google sheet will displayed on the map and new data can be entered.
+
+<div align="center"><kbd><img width="500" alt="Screenshot 2024-06-25 at 1 33 20 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/88d62d88-0658-418f-9c60-44c319a351d0"></kbd></div>
    
-5. Make sure you don't alter the google sheets data. If unaltered, our application can plot the collected data back to the map on map restart.
+6. Make sure you don't alter the google sheets data. If unaltered, our application can plot the collected data back to the map on map restart.
 
