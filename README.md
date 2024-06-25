@@ -18,7 +18,7 @@ _**The application is live at:**_ [Click Here](https://georgey764.github.io/MapI
 ## Features:
 1. Store your
   
-## Q) How to use it?
+## <p id="how-to-use">Q) How to use it?</p>
 1. Once you click start on the home page you will be able to see the input field.
 
 <div align="center"><kbd><img width="320" alt="Screenshot 2024-06-25 at 1 50 51 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/67422d04-4700-4e29-86f5-7f1b079d48c7"></kbd>
