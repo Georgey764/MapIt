@@ -7,15 +7,12 @@ _**The application is live at:**_ [Click Here](https://georgey764.github.io/MapI
 <div align="center"><kbd><img width="500" alt="Screenshot 2024-06-25 at 1 17 52 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/73841e4d-aac6-4eb4-a90a-f9402f793719"></kbd><kbd><img width="500" alt="Screenshot 2024-06-25 at 1 33 20 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/88d62d88-0658-418f-9c60-44c319a351d0"></kbd><br/><br/><p><i>fig: screenshot of the homepage & main app.</i></p></div>  
 
 ## Overview
-1. Features
-2. How it works
-3. How to use it
+1. <a href="#features">Features</a>
+2. <a href="#how-to-use">How to use it</a>
+3. <a href="#how-it-works">How it works</a>
 
   
-## How does it work?
-
-
-## Features:
+## <p id="features">Features:</p>
 1. Store your
   
 ## <p id="how-to-use">Q) How to use it?</p>
@@ -50,5 +47,5 @@ _**The application is live at:**_ [Click Here](https://georgey764.github.io/MapI
 <div align="center"><kbd><img width="617" alt="Screenshot 2024-06-25 at 2 13 37 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/8a832c7b-6786-4a19-a33d-0c2785d25201"></kbd></div>
 
 <br/>
-
+## <p id="how-it-works">How does it work?</p>
 
