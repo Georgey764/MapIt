@@ -25,6 +25,7 @@ _**The application is live at:**_ [Click Here](https://georgey764.github.io/MapI
 <kbd><img width="400" alt="Screenshot 2024-06-25 at 1 39 42 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/ca80544b-e671-49fb-a1fa-85dc81137240"></kbd></div>  
 <br/>
 
+
 2. Create a new google docs and paste it in the input field. Make sure that google docs has right permissions. Go to the top-right corner, choose "Share," set permission to "Anyone with the link," and set the access level to "Editor."
   
 <div align="center"><kbd><img width="400" alt="Screenshot 2024-06-25 at 1 55 27 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/8216b97e-c0ef-4e6b-9e17-6d9096a0e490">></kbd></div>
@@ -41,3 +42,6 @@ _**The application is live at:**_ [Click Here](https://georgey764.github.io/MapI
 5. The entered data is saved in the the google sheets that you entered in the home page before _(Refer to step number 2)_. To view the data just open the link.
   
 <div align="center"><kbd><img width="500" alt="Screenshot 2024-06-25 at 2 11 11 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/1e727820-1772-42d5-bab8-59aa3827eb4b"></kbd></div>
+
+> **BEWARE!!** Do not delete cell J1. Deleting will result in resetting the document.
+<img width="617" alt="Screenshot 2024-06-25 at 2 13 37 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/8a832c7b-6786-4a19-a33d-0c2785d25201">
