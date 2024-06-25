@@ -6,6 +6,17 @@ _**The application is live at:**_ [Click Here](https://georgey764.github.io/MapI
   
 <div align="center"><kbd><img width="600" alt="Screenshot 2024-06-25 at 1 17 52 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/73841e4d-aac6-4eb4-a90a-f9402f793719"></kbd><br/><br/><p><i>fig: screenshot of the homepage</i></p></div>  
 
+#### Overview
+1. Features
+2. How it works
+3. How to use it
+
+  
+#### How does it work?
+
+
+#### Features:
+1. Store your
   
 ### Q) How to use it?
 A) Just make sure to enter a valid URL of a google sheet document in the home-page of our application. Make sure that the sheet does not contain any information that you might need. Our application clears the data from sheets that don't contain the Spreadsheet tag to make space for it to plot the data collected from its users. The Spreadsheet tag is a tag that our application inserts in your sheet once it starts plotting!
