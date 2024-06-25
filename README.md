@@ -1,6 +1,8 @@
 # MapIt
 > A mapping application designed for Tourism related Businesses to gather insightful information of their visitors from their visitors in a fun and user-friendly manner.  
+
   
+This application uses google sheets to store and load the location data of tourist origin.
   
 _**The application is live at:**_ [Click Here](https://georgey764.github.io/MapIt/home-page.html)  
   
