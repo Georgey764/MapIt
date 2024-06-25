@@ -54,4 +54,4 @@ _**The application is live at:**_ [Click Here](https://georgey764.github.io/MapI
 <br/>  
   
 ## <p id="how-it-works">How does it work?</p>
-
+This application utilizes Google App Scripts. The location entered in the form is collected along with the latitude and longitude on the selected location and is stored in a Google Sheet. When reloading the website with a google sheet that already contains information the app pulls the latitude and longitudes data from the app and plots in back to the map.
