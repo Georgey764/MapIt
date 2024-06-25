@@ -34,13 +34,15 @@ _**The application is live at:**_ [Click Here](https://georgey764.github.io/MapI
 
 4. Upon entering the google sheets, you will be redirected to the main page where the location data stored on the google sheet will displayed on the map and new data can be entered.
 
+<div align="center><kbd><img width="400" alt="Screenshot 2024-06-25 at 2 05 24 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/d16e05bd-9540-47a1-ade5-74461a77810c">
+</kbd></div>
+
 <div align="center"><kbd><img width="400" alt="Screenshot 2024-06-25 at 1 33 20 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/88d62d88-0658-418f-9c60-44c319a351d0"></kbd><kbd><img width="400" alt="Screenshot 2024-06-25 at 2 05 24 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/d16e05bd-9540-47a1-ade5-74461a77810c"></kbd></div>  
 
 <br/>
    
 5. The entered data is saved in the the google sheets that you entered in the home page before _(Refer to step number 2)_. To view the data just open the link.
 
-<div align="center><kbd><img width="500" alt="Screenshot 2024-06-25 at 2 08 27 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/0697b058-ae75-4881-88e6-835897f0fb02">
-</kbd></div>
+
 
 Hi
