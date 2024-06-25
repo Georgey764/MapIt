@@ -13,10 +13,10 @@ _**The application is live at:**_ [Click Here](https://georgey764.github.io/MapI
 
   
 ## <p id="features">Features:</p>
-1. Displays the collected location data of tourists origin on a map.
-2. Allows the users to enter location data of their origin through an easy-to-read interactive form.
-3. Stores the collected data on any google sheet for analysis purposes.
-4. Able to load the collected data from sheets in the map.
+* Displays the collected location data of tourists origin on a map.
+* Allows the users to enter location data of their origin through an easy-to-read interactive form.
+* Stores the collected data on any google sheet for analysis purposes.
+* Able to load the collected data from sheets in the map.
   
 ## <p id="how-to-use">How to use it?</p>
 1. Once you click start on the home page you will be able to see the input field.
