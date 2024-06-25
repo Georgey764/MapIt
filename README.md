@@ -4,7 +4,7 @@
   
 _**The application is live at:**_ [Click Here](https://georgey764.github.io/MapIt/home-page.html)  
   
-<div align="center"><kbd><img width="600" alt="Screenshot 2024-06-25 at 1 17 52 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/73841e4d-aac6-4eb4-a90a-f9402f793719"></kbd><br/><br/><kbd><img width="600" alt="Screenshot 2024-06-25 at 1 33 20 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/88d62d88-0658-418f-9c60-44c319a351d0"></kbd><br/><br/><p><i>fig: screenshot of the homepage</i></p></div>  
+<div align="center"><kbd><img width="6400" alt="Screenshot 2024-06-25 at 1 17 52 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/73841e4d-aac6-4eb4-a90a-f9402f793719"></kbd><kbd><img width="400" alt="Screenshot 2024-06-25 at 1 33 20 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/88d62d88-0658-418f-9c60-44c319a351d0"></kbd><br/><br/><p><i>fig: screenshot of the homepage</i></p></div>  
 
 ## Overview
 1. Features
