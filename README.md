@@ -1,7 +1,7 @@
 # MapIt
 > A mapping application designed for Tourism related Businesses to gather insightful information of their visitors FROM their visitors in a fun and user-friendly manner.
 
-<img width="600" alt="Screenshot 2024-06-25 at 1 17 52 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/73841e4d-aac6-4eb4-a90a-f9402f793719">
+<div align="center"><img width="600" alt="Screenshot 2024-06-25 at 1 17 52 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/73841e4d-aac6-4eb4-a90a-f9402f793719"></div>
   
 _**The application is live at:**_ [Click Here](https://georgey764.github.io/MapIt/home-page.html)
 
