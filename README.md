@@ -46,6 +46,7 @@ _**The application is live at:**_ [Click Here](https://georgey764.github.io/MapI
   
 <div align="center"><kbd><img width="617" alt="Screenshot 2024-06-25 at 2 13 37 PM" src="https://github.com/Georgey764/MapIt/assets/127057827/8a832c7b-6786-4a19-a33d-0c2785d25201"></kbd></div>
 
-<br/>
+<br/>  
+  
 ## <p id="how-it-works">How does it work?</p>
 
